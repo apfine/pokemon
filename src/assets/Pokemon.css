@@ -2,23 +2,22 @@
 
 * {
   box-sizing: border-box;
-  margin:0px;
-  padding:0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-    margin-left: 5vw;
-    padding: 0;
-    font-family: 'Orbitron', sans-serif;
-    background: radial-gradient(circle at center, #0a0022, #05001a);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-  
+  margin-left: 5vw;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at center, #0a0022, #05001a);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 
 .container {
   background-color: rgba(15, 0, 40, 0.9);
@@ -79,12 +78,18 @@ h2 {
 
 .evolution-chain {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
   overflow-x: auto;
   gap: 2rem;
   padding: 1rem;
+  scroll-padding-left: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.evolution-chain::-webkit-scrollbar {
+  display: none;
 }
 
 .evolution-card {
@@ -94,6 +99,11 @@ h2 {
   text-align: center;
   box-shadow: 0 0 15px #00f0ff;
   min-width: 150px;
+  flex-shrink: 0;
+}
+
+.evolution-card:first-child {
+  margin-left: 1rem;
 }
 
 .evolution-card img {
